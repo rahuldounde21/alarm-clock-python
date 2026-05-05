@@ -1,0 +1,7 @@
+# Core dependency (optional - graceful fallback if missing)
+playsound==1.2.2
+
+# Tkinter is part of the Python standard library.
+# On Linux, install via your package manager:
+#   sudo apt install python3-tk       (Debian/Ubuntu)
+#   sudo dnf install python3-tkinter  (Fedora)
