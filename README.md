@@ -1,99 +1,126 @@
 # ⏰ Alarm Clock — Python Project
 
-A full-featured alarm clock application in Python, with a **Tkinter GUI** and a fallback **CLI** version.
+A modern and feature-rich **Alarm Clock application** built using **Python**, featuring both a **Tkinter GUI** and a **Command-Line Interface (CLI)** version.
+
+---
+
+## 📸 Preview
+
+![Alarm Clock](screenshot.png)
+
+---
+
+## 🚀 Features
+
+* ⏰ Set multiple alarms
+* 🕐 Supports 12-hour & 24-hour formats
+* 🔔 Cross-platform sound alerts
+* 💤 Snooze functionality (5 minutes)
+* 🗑 Delete or enable/disable alarms
+* 🎵 Custom alarm tones (GUI)
+* 📋 Alarm list display
+* 🖥 Real-time clock interface
+* 🌙 Midnight auto-reset
 
 ---
 
 ## 📁 Project Structure
 
-```
+```bash
 alarm_clock/
-├── alarm_clock.py       # GUI version (Tkinter) ← main app
-├── alarm_clock_cli.py   # CLI version (terminal only)
+├── alarm_clock.py        # GUI version (Tkinter)
+├── alarm_clock_cli.py    # CLI version
 ├── requirements.txt
 └── README.md
 ```
 
 ---
 
-## 🔧 Installation
+## ⚙️ Installation
 
-### 1. Python Version
-Requires **Python 3.10+** (uses modern type hints).
+### 1️⃣ Requirements
 
-### 2. Install Dependencies
+* Python **3.10+**
+
+### 2️⃣ Install Dependencies
+
 ```bash
-pip install playsound==1.2.2
+pip install -r requirements.txt
 ```
 
-> `playsound` is **optional** — if not installed, the app falls back to
-> `winsound` (Windows) or terminal bell (`\a`) automatically.
-
-> Tkinter is **bundled with standard Python** on Windows and macOS.
-> On Linux, install it with:
-> ```bash
-> sudo apt install python3-tk     # Debian/Ubuntu
-> sudo dnf install python3-tkinter  # Fedora
-> ```
+> `playsound` is optional — fallback system handles sound automatically.
 
 ---
 
-## ▶️ How to Run
+## ▶️ Usage
 
-### GUI Version (recommended)
+### 🔹 Run GUI Version (Recommended)
+
 ```bash
 python alarm_clock.py
 ```
 
-### CLI Version (no display required)
+### 🔹 Run CLI Version
+
 ```bash
 python alarm_clock_cli.py
 ```
 
 ---
 
-## ✨ Features
+## 🕐 Supported Time Formats
 
-| Feature | GUI | CLI |
-|---|---|---|
-| Set multiple alarms | ✅ | ✅ |
-| 12h / 24h time input | ✅ | ✅ |
-| Input validation | ✅ | ✅ |
-| Sound playback | ✅ | ✅ |
-| Snooze (5 min) | ✅ | ✅ |
-| Delete / toggle alarm | ✅ | ✅ |
-| Custom sound file | ✅ | ❌ |
-| Live clock display | ✅ | ✅ |
-| Alarm list | ✅ | ✅ |
-| Midnight auto-reset | ✅ | ✅ |
+| Input    | Format  |
+| -------- | ------- |
+| 07:30    | 24-hour |
+| 19:30    | 24-hour |
+| 7:30 AM  | 12-hour |
+| 07:30 PM | 12-hour |
 
 ---
 
-## 🕐 Accepted Time Formats
+## 🔊 Sound Priority System
 
-| Input | Interpretation |
-|---|---|
-| `07:30:00` | 07:30:00 AM (24h) |
-| `07:30` | 07:30:00 AM (24h) |
-| `7:30 AM` | 07:30:00 AM (12h) |
-| `07:30 PM` | 19:30:00 (12h) |
-| `19:45:30` | 19:45:30 (24h) |
+1. Custom sound file
+2. `playsound` library
+3. `winsound` (Windows)
+4. System beep (`\a`)
 
 ---
 
-## 🔊 Sound Fallback Chain
+## 🛠 Tech Stack
 
-1. **Custom MP3/WAV** (GUI only, if a file is chosen)
-2. **playsound** library (cross-platform)
-3. **winsound.Beep** (Windows only)
-4. **Terminal bell** (`\a`) — works everywhere
+* Python
+* Tkinter (GUI)
+* playsound (Audio)
 
 ---
 
-## 🛠️ Troubleshooting
+## 🐞 Troubleshooting
 
-| Problem | Fix |
-|---|---|
-| `No module named tkinter` | `sudo apt install python3-tk` |
-| No sound on Linux | Install `gstreamer` or use the CLI version |
-| `playsound` errors | Use `pip install playsound==1.2.2` (not 1.3.0) |
+| Issue             | Solution             |
+| ----------------- | -------------------- |
+| tkinter not found | Install `python3-tk` |
+| No sound on Linux | Install gstreamer    |
+| playsound error   | Use version `1.2.2`  |
+
+---
+
+## 📌 Future Improvements
+
+* Save alarms permanently
+* Dark/Light mode toggle
+* Desktop notifications
+* Mobile-style UI
+
+---
+
+## 👨‍💻 Author
+
+**Rahul Dounde**
+
+---
+
+## ⭐ Support
+
+If you like this project, give it a ⭐ on GitHub!
